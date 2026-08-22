@@ -18,14 +18,14 @@ It helps an agent move beyond homepage or README paraphrasing and answer the que
 - Prefers primary sources and labels project claims, analysis, and unresolved facts.
 - Uses progressive disclosure: the agent reads only the reference relevant to the current target.
 - Treats research as read-only unless the user separately authorizes mutations.
-- Integrates cleanly with the companion `wechat-article-reader` Skill for WeChat Official Account links.
+- Integrates cleanly with the companion [`wechat-article-reader`](https://github.com/laberat/wechat-article-reader-skill) Skill for WeChat Official Account links.
 
 ## Install
 
 With a Skills-compatible installer:
 
 ```bash
-npx skills add <github-owner>/link-research-skill --skill link-research
+npx skills add laberat/link-research-skill --skill link-research
 ```
 
 Manual Codex installation:
