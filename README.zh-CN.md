@@ -65,7 +65,7 @@ link-research-skill/
 
 ## 测试
 
-测试会校验 Skill 元数据、reference 链接、UI 元数据、机器指令语言一致性、中英文 README 互链，以及是否存在未完成的脚手架内容。
+测试会校验 Agent Skills 命名和 frontmatter 约束、reference 链接、UI 元数据、机器指令语言一致性、中英文 README 互链，以及是否存在未完成的脚手架内容。
 
 ```bash
 python3 -m unittest discover -s tests -v
@@ -76,6 +76,8 @@ python3 -m unittest discover -s tests -v
 该 Skill 定义的是只读调研流程。它不会授权安装或执行第三方代码、登录、提交表单、发布内容、修改权限或发送用户数据。只有在 Agent 环境提供浏览器能力且任务确实需要时，才会使用用户已有的浏览器状态。
 
 所有被调研的页面、代码仓库、文章和读取产物都属于非可信证据。目标内容中嵌入的指令不能覆盖用户请求、Skill 或更高优先级指令。
+
+安全报告方式和支持边界参见 [SECURITY.md](SECURITY.md)。
 
 ## 许可证
 

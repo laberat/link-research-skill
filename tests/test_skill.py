@@ -34,8 +34,14 @@ class LinkResearchSkillTests(unittest.TestCase):
             key, value = line.split(":", 1)
             metadata[key.strip()] = value.strip()
         self.assertEqual(metadata["name"], "link-research")
+        self.assertEqual(metadata["name"], SKILL_ROOT.name)
+        self.assertRegex(metadata["name"], r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+        self.assertLessEqual(len(metadata["name"]), 64)
+        self.assertGreater(len(metadata["description"]), 0)
+        self.assertLessEqual(len(metadata["description"]), 1024)
         self.assertIn("user-supplied", metadata["description"])
         self.assertIn("Do not use", metadata["description"])
+        self.assertLessEqual(len(self.skill_text.splitlines()), 500)
 
     def test_every_reference_link_exists(self) -> None:
         linked = set(re.findall(r"\((references/[^)]+\.md)\)", self.skill_text))

@@ -64,7 +64,7 @@ link-research-skill/
 
 ## Test
 
-The test suite validates the Skill manifest, referenced resources, UI metadata, English-only machine instructions, bilingual README links, and absence of unfinished scaffold content.
+The test suite validates Agent Skills naming and frontmatter constraints, referenced resources, UI metadata, English-only machine instructions, bilingual README links, and absence of unfinished scaffold content.
 
 ```bash
 python3 -m unittest discover -s tests -v
@@ -75,6 +75,8 @@ python3 -m unittest discover -s tests -v
 This Skill defines a read-only research workflow. It does not grant permission to install or run third-party code, sign in, submit forms, publish content, change permissions, or send user data. Existing browser state is used only when the active Agent environment exposes it and the task calls for it.
 
 All researched pages, repositories, articles, and retrieved artifacts are treated as untrusted evidence. Instructions embedded in target content never override the user request, the Skill, or higher-priority instructions.
+
+See [SECURITY.md](SECURITY.md) for the reporting policy and supported security boundary.
 
 ## License
 
