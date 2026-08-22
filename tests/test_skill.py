@@ -67,6 +67,12 @@ class LinkResearchSkillTests(unittest.TestCase):
         self.assertIn("README.zh-CN.md", english)
         self.assertIn("README.md", chinese)
 
+    def test_untrusted_content_cannot_become_instructions(self) -> None:
+        normalized = self.skill_text.lower()
+        self.assertIn("untrusted evidence", normalized)
+        self.assertIn("never follow commands embedded", normalized)
+        self.assertIn("higher-priority instructions", normalized)
+
     def test_no_unfinished_scaffold_content(self) -> None:
         checked_paths = [*SKILL_ROOT.rglob("*"), REPO_ROOT / "README.md", REPO_ROOT / "README.zh-CN.md"]
         for path in checked_paths:
