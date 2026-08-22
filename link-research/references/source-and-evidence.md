@@ -1,53 +1,53 @@
-# 内容获取与证据规则
+# Content Acquisition and Evidence Rules
 
-## 获取顺序
+## Acquisition order
 
-选择最接近原始内容、同时最少增加用户操作的方式：
+Choose the method that stays closest to the original content while adding the least user friction:
 
-1. 用户明确交接的、已经成功渲染的准确标签页。
-2. 对应服务的官方 API、CLI、连接器或语义读取工具。
-3. 原始 URL 的直接读取。
-4. 官方文档、代码仓库及其他一手资料的交叉验证。
-5. 搜索索引、缓存、转载或镜像。
-6. 用户提供的 HTML、PDF、截图或正文。
+1. An exact, successfully rendered browser tab explicitly handed off by the user.
+2. The service's official API, CLI, connector, or semantic reader.
+3. Direct retrieval of the original URL.
+4. Cross-checking with official documentation, code repositories, and other primary sources.
+5. Search indexes, caches, reposts, or mirrors.
+6. User-provided HTML, PDF, screenshots, or copied text.
 
-这不是机械顺序。GitHub 仓库通常应从 GitHub/代码开始；登录后页面和强反爬页面通常应从现有标签页开始。
+This is not a mechanical sequence. GitHub repositories normally start with GitHub and the code; authenticated or strongly anti-bot-protected pages normally start with the existing browser tab.
 
-MCP 是工具接口，不是证据等级。先确认一个 MCP 的底层数据源和新增能力；如果它只是重复已经失败的普通 HTTP 请求，就不要无意义重试。
+MCP is a tool interface, not an evidence tier. First identify an MCP's underlying source and additional capability. Do not retry through it when it merely wraps the same ordinary HTTP request that already failed.
 
-## 浏览器交接
+## Browser handoff
 
-需要用户现有页面状态时，明确提示：
+When the user's existing page state matters, ask clearly:
 
-> 请在 Chrome 或 Codex 应用内浏览器中打开该页面，等待主要内容正常显示，并附上这个准确标签页。确认后我会读取现有页面，不刷新、不重新导航。
+> Open the page in Chrome or the Codex in-app browser, wait until the main content is visible, and attach that exact tab. After you confirm, I will read the existing page without refreshing or navigating again.
 
-接管后：
+After handoff:
 
-1. 核对当前标题与 URL。
-2. 直接读取当前 DOM。
-3. 定位正文或主要数据区域。
-4. 必要时滚动加载懒加载内容。
-5. DOM 不完整或视觉信息重要时使用截图。
-6. 页面本身是验证页时停止，不尝试绕过。
+1. Verify the current title and URL.
+2. Read the current DOM directly.
+3. Locate the main content or primary data area.
+4. Scroll when needed to load lazy content.
+5. Use screenshots when the DOM is incomplete or visual information matters.
+6. Stop when the page itself is a verification screen; do not attempt to bypass it.
 
-## 证据标签
+## Evidence labels
 
-在内部推理和必要的输出中区分：
+Distinguish these categories in reasoning and, when useful, in the answer:
 
-- **已验证事实**：由原始页面、代码、官方文档或原始数据直接支持。
-- **项目方自述**：来自官网、README、创始人文章或营销材料，尚未独立验证。
-- **分析推断**：根据多个事实得出的解释，明确使用“这意味着”“我判断”“可能”等措辞。
-- **待验证**：现有来源不足、冲突或页面不可访问。
+- **Verified fact**: directly supported by the original page, code, official documentation, or original data.
+- **Project claim**: stated by the website, README, founder, or marketing material but not independently verified.
+- **Analytical inference**: an interpretation derived from multiple facts and explicitly framed as an inference.
+- **Unresolved**: evidence is insufficient or conflicting, or the page is inaccessible.
 
-## 时间与来源
+## Time and source handling
 
-- 对价格、团队、版本、活跃度、用户数、收入、功能和政策等易变化信息，记录当前日期并使用最新一手来源。
-- 新闻与事件同时检查发布日期和事件发生日期。
-- 技术问题优先使用官方文档、规范、源代码和论文。
-- 一篇文章引用另一个数据源时，尽量回到原始数据源。
+- For changing facts such as pricing, team, versions, activity, user counts, revenue, features, and policies, record the current date and use the latest primary source.
+- For news and events, check both the publication date and the date the event occurred.
+- For technical questions, prefer official documentation, specifications, source code, and papers.
+- When an article cites another data source, return to the original source when possible.
 
-## 停止条件
+## Stopping conditions
 
-- 同一种请求方式失败后，不通过更换大量 User-Agent、代理或重复请求来穷举绕过。
-- 验证码、登录、付费或安全拦截出现时停止相应路径。
-- 无法取得原文时，可以使用转载或搜索摘要，但必须降低结论置信度并披露来源性质。
+- After one request method fails, do not enumerate User-Agents, rotate proxies, or repeat requests in an attempt to bypass the block.
+- Stop the relevant path when CAPTCHA, login, payment, or a safety interstitial appears.
+- If the original text is unavailable, a repost or search snippet may be used with lower confidence and explicit disclosure of its source type.

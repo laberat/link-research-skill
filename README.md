@@ -1,5 +1,7 @@
 # Link Research Skill
 
+[简体中文](README.zh-CN.md)
+
 An evidence-first Agent Skill for researching a product website, open-source repository, article, technical page, or paper from a user-supplied link.
 
 It helps an agent move beyond homepage or README paraphrasing and answer the questions that matter:
@@ -62,7 +64,7 @@ link-research-skill/
 
 ## Test
 
-The test suite validates the Skill manifest, referenced resources, UI metadata, and absence of unfinished scaffold content.
+The test suite validates the Skill manifest, referenced resources, UI metadata, English-only machine instructions, bilingual README links, and absence of unfinished scaffold content.
 
 ```bash
 python3 -m unittest discover -s tests -v

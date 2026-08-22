@@ -50,8 +50,26 @@ class LinkResearchSkillTests(unittest.TestCase):
         self.assertGreaterEqual(len(metadata["short_description"]), 25)
         self.assertLessEqual(len(metadata["short_description"]), 64)
 
+    def test_machine_instructions_use_one_canonical_language(self) -> None:
+        instruction_paths = [
+            SKILL_ROOT / "SKILL.md",
+            SKILL_ROOT / "agents" / "openai.yaml",
+            *(SKILL_ROOT / "references").glob("*.md"),
+        ]
+        for path in instruction_paths:
+            with self.subTest(path=path):
+                text = path.read_text(encoding="utf-8")
+                self.assertIsNone(re.search(r"[\u3400-\u9fff]", text))
+
+    def test_bilingual_readmes_link_to_each_other(self) -> None:
+        english = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+        chinese = (REPO_ROOT / "README.zh-CN.md").read_text(encoding="utf-8")
+        self.assertIn("README.zh-CN.md", english)
+        self.assertIn("README.md", chinese)
+
     def test_no_unfinished_scaffold_content(self) -> None:
-        for path in SKILL_ROOT.rglob("*"):
+        checked_paths = [*SKILL_ROOT.rglob("*"), REPO_ROOT / "README.md", REPO_ROOT / "README.zh-CN.md"]
+        for path in checked_paths:
             if path.is_file():
                 text = path.read_text(encoding="utf-8")
                 self.assertNotIn("[TODO:", text, path)

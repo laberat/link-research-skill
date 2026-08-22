@@ -5,7 +5,7 @@ description: Research and explain a user-supplied product site, open-source repo
 
 # Link Research
 
-Turn a link into an evidence-backed explanation of the thing behind it. Default to a medium-depth, read-only investigation in the user's language, covering product meaning and implementation rather than paraphrasing the landing page or README.
+Turn a link into an evidence-backed explanation of the thing behind it. Default to a medium-depth, read-only investigation covering product meaning and implementation rather than paraphrasing the landing page or README. Respond in the user's language unless they request otherwise, while preserving source-language terms when translation would reduce precision.
 
 ## Acquire the target faithfully
 

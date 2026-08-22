@@ -1,32 +1,32 @@
-# 开源项目调研
+# Open-Source Repository Research
 
-## 不要停在 README
+## Do not stop at the README
 
-按需检查：
+Inspect as needed:
 
-README → LICENSE → package manifest → 入口文件 → 核心模块 → 配置/权限 → 测试与 CI → Releases/Tags → Issues/PR → 提交活跃度。
+README → license → package manifest → entry points → core modules → configuration and permissions → tests and CI → releases and tags → issues and pull requests → commit activity.
 
-## 核心问题
+## Core questions
 
-- 项目解决什么问题，提供库、CLI、服务、插件、Skill 还是完整应用？
-- 最小使用流程和真实输入输出是什么？
-- README 的安装命令、包名和功能是否与代码及发布渠道一致？
-- 入口文件在哪里，主要模块和数据流如何组织？
-- 是否调用第三方服务，数据会发往哪里？
-- 是否读取凭据、浏览器状态、本地文件或环境变量？
-- 是否包含上传、执行、删除、发布或权限修改等副作用？
-- 许可证是否允许用户预期的用途？依赖许可证是否有明显冲突？
-- 测试覆盖的是行为还是只有语法/固定文本？CI 是否实际运行？
-- 最近是否持续维护？开放 Issue 暴露了哪些真实限制？
-- 更适合直接采用、二次开发、参考实现，还是仅作为概念证明？
+- What problem does the project solve, and does it provide a library, CLI, service, plugin, Skill, or complete application?
+- What is the minimum usage flow, with real inputs and outputs?
+- Do the README's installation commands, package names, and features match the code and release channels?
+- Where are the entry points, and how are the main modules and data flows organized?
+- Does it call third-party services, and where is data sent?
+- Does it read credentials, browser state, local files, or environment variables?
+- Does it cause side effects such as uploading, executing, deleting, publishing, or changing permissions?
+- Does the license permit the user's intended use, and are there obvious dependency-license conflicts?
+- Do tests cover behavior or only syntax and fixed text? Does CI actually run?
+- Is the project actively maintained, and what real limitations do open issues reveal?
+- Is it best adopted directly, extended, used as a reference implementation, or treated only as a proof of concept?
 
-## 实现说明
+## Implementation explanation
 
-给出可核对的模块级架构，而不是只复述技术栈。必要时引用入口文件和关键代码位置。区分：
+Provide a verifiable module-level architecture instead of merely repeating the technology stack. Cite entry points and key code locations when useful. Distinguish:
 
-- 普通工程组合；
-- 非显而易见的算法或协议处理；
-- 依赖外部平台的脆弱部分；
-- 文档宣称但代码尚未支持的部分。
+- ordinary engineering composition;
+- non-obvious algorithm or protocol handling;
+- fragile dependencies on external platforms;
+- documented claims that the code does not yet support.
 
-Star 和 Fork 只能作为关注度信号，不能证明安全性、维护质量或生产成熟度。
+Stars and forks are only attention signals; they do not prove security, maintenance quality, or production maturity.

@@ -1,22 +1,22 @@
-# 技术文档与论文调研
+# Technical Documentation and Paper Research
 
-## 核心问题
+## Core questions
 
-- 它解决的技术问题和适用前提是什么？
-- 相比既有方案改变了哪个抽象、接口、算法或系统边界？
-- 输入、输出、状态、依赖和失败模式是什么？
-- 示例是否对应当前版本，能否在声明的环境中运行？
-- 性能、成本或质量数据如何测得，基线是否公平？
-- 论文的实验设置、数据集、消融和限制是否支持结论？
-- 哪些条件变化会让结论不成立？
-- 迁移到用户场景需要哪些适配、依赖和验证？
+- What technical problem does it solve, and under what assumptions?
+- Which abstraction, interface, algorithm, or system boundary does it change relative to existing approaches?
+- What are the inputs, outputs, state, dependencies, and failure modes?
+- Do the examples match the current version, and do they run in the stated environment?
+- How were performance, cost, or quality results measured, and are the baselines fair?
+- Do the paper's experimental setup, datasets, ablations, and limitations support its conclusion?
+- Which changed conditions would invalidate the conclusion?
+- What adaptations, dependencies, and validation are required for the user's environment?
 
-## 资料优先级
+## Source priority
 
-规范/论文原文 → 官方文档 → 当前源代码与测试 → Release/Issue → 作者说明 → 第三方教程。
+Specification or original paper → official documentation → current source code and tests → releases and issues → author commentary → third-party tutorials.
 
-区分概念解释与当前实现。版本、弃用、默认值和 API 行为必须用当前官方资料或代码验证。
+Distinguish conceptual explanation from the current implementation. Verify versions, deprecations, defaults, and API behavior against current official material or code.
 
-## 实现表达
+## Explaining the implementation
 
-优先用小型数据流、调用流或模块图解释三项以上的依赖关系。不要为了显得完整而罗列所有类、参数或章节；聚焦会影响正确性、性能、可靠性和采用决策的机制。
+Prefer a small data-flow, call-flow, or module diagram when explaining three or more dependencies. Do not list every class, parameter, or section merely for completeness; focus on mechanisms that affect correctness, performance, reliability, and adoption decisions.

@@ -1,4 +1,4 @@
 interface:
-  display_name: "链接调研"
-  short_description: "系统分析链接背后的产品、开源项目、文章、证据与实现机制"
-  default_prompt: "使用 $link-research 调研这个链接，说明它做什么、为谁服务、如何实现，以及边界与风险。"
+  display_name: "Link Research"
+  short_description: "Research links, implementation, evidence, and risks"
+  default_prompt: "Use $link-research to explain what this link represents, who needs it, how it works, and its limits and risks."

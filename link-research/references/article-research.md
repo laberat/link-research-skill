@@ -1,28 +1,28 @@
-# 文章、报道与评论调研
+# Article, Report, and Commentary Research
 
-## 先还原文章
+## Reconstruct the article first
 
-- 标题、作者、发布者、发布时间和原始 URL 是什么？
-- 核心论点、主要证据和结论分别是什么？
-- 哪些段落是事实陈述，哪些是作者判断、类比或推测？
-- 文章是否引用原始数据、代码、公告或采访？
-- 作者或发布方是否存在营销、投资、销售或立场关联？
+- What are the title, author, publisher, publication time, and original URL?
+- What are the central argument, main evidence, and conclusion?
+- Which passages state facts, and which express judgment, analogy, or speculation?
+- Does the article cite original data, code, announcements, or interviews?
+- Does the author or publisher have a marketing, investment, sales, or advocacy interest?
 
-## 再做事实核查
+## Then verify the claims
 
-- 产品功能、价格、团队、收入、用户量和时间线回到官方或原始来源核对。
-- 技术结论回到代码、规范、论文或官方文档核对。
-- 数字没有原始来源时，不把精确数字当作已验证事实。
-- 搜索摘要、转载和缓存只能作为补充，并披露其性质。
+- Check product features, pricing, team, revenue, user counts, and timelines against official or original sources.
+- Check technical conclusions against code, specifications, papers, or official documentation.
+- Do not treat an exact number as verified when no original source supports it.
+- Use search snippets, reposts, and caches only as supplements, and disclose their nature.
 
-## 输出重点
+## Focus of the answer
 
-在总结文章观点之外，解释：
+Beyond summarizing the article's position, explain:
 
-- 作者看到了什么真实变化；
-- 哪些结论有证据支持；
-- 哪些结论依赖隐含假设；
-- 文章忽略了哪些替代解释、失败案例或限制；
-- 对用户当前决策真正有用的启示是什么。
+- what real change the author observed;
+- which conclusions the evidence supports;
+- which conclusions depend on hidden assumptions;
+- which alternative explanations, counterexamples, or limitations the article omits;
+- which implications are genuinely useful for the user's current decision.
 
-不得把文章作者的观点无标记地改写为客观事实。
+Never restate the author's opinion as objective fact without labeling it.

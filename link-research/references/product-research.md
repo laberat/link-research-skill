@@ -1,31 +1,31 @@
-# 商业产品调研
+# Commercial Product Research
 
-## 核心问题
+## Core questions
 
-- 首页如何用一句话定位产品？实际能力是否支持这个定位？
-- 谁是使用者、购买者和最终受益者？
-- 什么具体事件会让用户开始寻找它？用户此前如何完成任务？
-- 核心流程是什么，首次价值实现在哪里？
-- 它位于前台入口、工作流、数据库、协作系统还是基础设施层？
-- 为什么不用 Notion、表格、通用 AI、人工服务或自建方案？
-- 哪些功能是核心能力，哪些只是包装、模板或集成？
-- 免费版和付费版如何分界，收费单位是否匹配价值？
-- 获客是否来自 SEO、模板、分享标识、生态集成、销售或社区？
-- 最接近的竞争对手和替代方案是什么？优化了什么，又牺牲了什么？
-- 隐私、安全、数据位置、锁定和规模成本有哪些风险？
+- How does the homepage position the product in one sentence, and do its actual capabilities support that position?
+- Who uses it, who buys it, and who ultimately benefits?
+- What specific event makes someone look for it, and how did they complete the task before?
+- What is the core workflow, and where does the user first receive value?
+- Does it sit at the user-facing entry point, workflow, database, collaboration, or infrastructure layer?
+- Why would users not choose Notion, a spreadsheet, general-purpose AI, a human service, or a custom-built solution?
+- Which features are core capabilities, and which are packaging, templates, or integrations?
+- Where is the boundary between free and paid, and does the billing unit align with delivered value?
+- Does acquisition come from SEO, templates, shared branding, ecosystem integrations, sales, or community?
+- What are the closest competitors and substitutes? What does this product optimize, and what does it sacrifice?
+- What risks arise from privacy, security, data location, lock-in, and cost at scale?
 
-## 推荐资料顺序
+## Recommended source order
 
-首页 → 功能页 → Pricing → 模板/客户案例 → Help Center → 集成/API → Security/Privacy → Changelog → 外部评价。
+Homepage → feature pages → pricing → templates and customer stories → help center → integrations and API → security and privacy → changelog → external reviews.
 
-用 Help Center、真实产品界面或 API 文档校验首页宣传。客户 Logo、收入、用户量和转化率属于项目方自述，除非有独立证据。
+Validate homepage claims against the help center, the real product interface, or API documentation. Treat customer logos, revenue, user counts, and conversion rates as project claims unless independent evidence supports them.
 
-## 实现分析
+## Implementation analysis
 
-把产品拆成：
+Decompose the product into:
 
 ```text
-用户入口 → 输入/数据模型 → 规则或模型处理 → 存储 → 输出 → 自动化/下游系统
+User entry point → input/data model → rules or model processing → storage → output → automation/downstream systems
 ```
 
-判断它是单一工具、轻应用、系统记录源，还是多个现有服务的编排层。说明自建 MVP 的最小组件，以及真正困难的可靠性、数据、分发或合规部分。
+Determine whether it is a single-purpose tool, a lightweight application, a system of record, or an orchestration layer over existing services. Explain the minimum components of a custom MVP and the genuinely difficult parts involving reliability, data, distribution, or compliance.
