@@ -7,7 +7,7 @@
 - What specific event makes someone look for it, and how did they complete the task before?
 - What is the core workflow, and where does the user first receive value?
 - Does it sit at the user-facing entry point, workflow, database, collaboration, or infrastructure layer?
-- Why would users not choose Notion, a spreadsheet, general-purpose AI, a human service, or a custom-built solution?
+- What tools, workarounds, or services do users rely on today, and where do those alternatives fall short for this job?
 - Which features are core capabilities, and which are packaging, templates, or integrations?
 - Where is the boundary between free and paid, and does the billing unit align with delivered value?
 - Does acquisition come from SEO, templates, shared branding, ecosystem integrations, sales, or community?

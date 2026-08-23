@@ -42,7 +42,7 @@ cp -R link-research ~/.codex/skills/link-research
 ## 使用示例
 
 ```text
-调研这个产品，解释谁需要它、它如何工作，以及为什么 Notion 不足以满足需求：
+调研这个产品，解释谁需要它、它如何工作，以及现有替代方案为什么可能无法满足需求：
 https://example.com
 ```
 

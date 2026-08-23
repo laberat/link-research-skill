@@ -41,7 +41,7 @@ Start a new Agent task after installation so the Skill index is refreshed.
 ## Usage
 
 ```text
-Research this product and explain who needs it, how it works, and why Notion is not enough:
+Research this product and explain who needs it, how it works, and why existing alternatives may be insufficient:
 https://example.com
 ```
 
